@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import ThreeR from "./Components/homepageThreeR";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Router>
         <Navbar
           expand="lg"
-          className="bg-body-tertiary bg-dark"
+          className="bg-body-tertiary bg-dark sticky-top"
           bg="dark"
           data-bs-theme="dark"
         >
@@ -42,7 +43,16 @@ function App() {
         </Navbar>
 
         <Routes>
-          <Route path="/" element={<MovingBg />}></Route>
+          <Route
+            path="/"
+            element={
+              <>
+                <MovingBg />
+                {/* <ThreeR /> */}
+                {/* Bekar lag rha yeh ThreeR koi sudhar sako to dekh lena */}
+              </>
+            }
+          ></Route>
           <Route path="/user" element={<UserDashboard />}></Route>
           <Route path="/store" element={<Store />}></Route>
           <Route path="/Feedback" element={<FeedbackForm />}></Route>
@@ -54,3 +64,5 @@ function App() {
 }
 
 export default App;
+
+// Wolfram API App id -> 4A54TQ-UJH9LPK768
