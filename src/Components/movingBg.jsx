@@ -14,6 +14,7 @@ function MovingBg() {
     marginRight: "auto",
     paddingLeft: 0,
     paddingRight: 0,
+    height: "80vh",
   };
 
   const videoStyle = {
@@ -54,39 +55,51 @@ function MovingBg() {
     marginBottom: "0.8rem",
   };
 
+  const colStyle2 = {
+    fontSize: "3rem", // Default font size for small screens
+
+    "@media (min-width: 576px)": {
+      fontSize: "3.5rem",
+    },
+
+    "@media (min-width: 768px)": {
+      fontSize: "4rem",
+    },
+    "@media (min-width: 992px)": {
+      fontSize: "5rem",
+    },
+    "@media (min-width: 1200px)": {
+      fontSize: "6rem",
+    },
+
+    fontWeight: "bold",
+    marginBottom: "0.8rem",
+  };
+
   return (
-    <Container fluid className="mt-0 p-0" style={containerStyle}>
+    <Container fluid className="mt- p-0" style={containerStyle}>
       <video autoPlay loop muted className="bg-vid" style={videoStyle}>
         <source src={Bgvideo} type="video/mp4" />
       </video>
 
       <Row style={rowStyle}>
         <Col className="d-flex justify-content-center align-items-center">
-          <CountUp style={colStyle} end={100} duration={4.5} />
+          {}
         </Col>
         <Col className="d-flex justify-content-center align-items-center">
-          <CountUp style={colStyle} end={200} duration={4.5} />
-
           {/* Adjust values as needed */}
         </Col>
         <Col className="d-flex justify-content-center align-items-center">
-          <CountUp end={300} style={colStyle} duration={4.5} />
           {/* Adjust values as needed */}
         </Col>
       </Row>
       <Row style={rowStyle}>
+        <Col className="d-flex justify-content-center align-items-center"></Col>
         <Col className="d-flex justify-content-center align-items-center">
-          <CountUp end={400} style={colStyle} duration={4.5} />{" "}
-          {/* Adjust values as needed */}
+          <CountUp end={500} style={colStyle2} duration={4.5} />
+          {}
         </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <CountUp end={500} style={colStyle} duration={4.5} />{" "}
-          {/* Adjust values as needed */}
-        </Col>
-        <Col className="d-flex justify-content-center align-items-center">
-          <CountUp end={600} style={colStyle} duration={4.5} />{" "}
-          {/* Adjust values as needed */}
-        </Col>
+        <Col className="d-flex justify-content-center align-items-center"></Col>
       </Row>
       <Row style={rowStyle}>
         <Col className="d-flex justify-content-center align-items-center">
