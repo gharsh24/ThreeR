@@ -10,6 +10,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import ThreeR from "./Components/homepageThreeR";
 import QnaPage from "./Components/QandA";
+import News from "./Components/News";
 function App() {
   return (
     <>
@@ -56,7 +57,7 @@ function App() {
             element={
               <>
                 <MovingBg />
-
+                <News />
                 {/* <ThreeR /> */}
                 {/* Bekar lag rha yeh ThreeR koi sudhar sako to dekh lena */}
               </>
