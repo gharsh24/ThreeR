@@ -9,7 +9,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import ThreeR from "./Components/homepageThreeR";
-
+import QnaPage from "./Components/QandA";
 function App() {
   return (
     <>
@@ -48,6 +48,7 @@ function App() {
             element={
               <>
                 <MovingBg />
+
                 {/* <ThreeR /> */}
                 {/* Bekar lag rha yeh ThreeR koi sudhar sako to dekh lena */}
               </>
@@ -55,7 +56,7 @@ function App() {
           ></Route>
           <Route path="/user" element={<UserDashboard />}></Route>
           <Route path="/store" element={<Store />}></Route>
-          <Route path="/Feedback" element={<FeedbackForm />}></Route>
+          <Route path="/Feedback" element={<QnaPage />}></Route>
         </Routes>
       </Router>
       {/* <MovingBg /> */}
