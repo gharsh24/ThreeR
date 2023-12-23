@@ -74,6 +74,7 @@ function MovingBg() {
 
     fontWeight: "bold",
     marginBottom: "0.8rem",
+    marginTop: "0rem",
   };
 
   return (
@@ -95,23 +96,56 @@ function MovingBg() {
       </Row>
       <Row style={rowStyle}>
         <Col className="d-flex justify-content-center align-items-center"></Col>
+
         <Col className="d-flex justify-content-center align-items-center">
-          <CountUp end={500} style={colStyle2} duration={4.5} />
+          <Row className="mt-2">
+            <p className="text-center">Number of Trees Planted:</p>
+            <CountUp
+              end={500}
+              className="text-center"
+              style={colStyle2}
+              duration={4.5}
+            />
+          </Row>
           {}
         </Col>
         <Col className="d-flex justify-content-center align-items-center"></Col>
       </Row>
       <Row style={rowStyle}>
         <Col className="d-flex justify-content-center align-items-center">
-          <CountUp end={400} style={colStyle} duration={4.5} />{" "}
+          <Row className="mt-2">
+            <p className="text-center">Number of Trees Planted:</p>
+            <CountUp
+              end={400}
+              className="text-center"
+              style={colStyle}
+              duration={4.5}
+            />{" "}
+          </Row>
           {/* Adjust values as needed */}
         </Col>
         <Col className="d-flex justify-content-center align-items-center">
-          <CountUp end={500} style={colStyle} duration={4.5} />{" "}
+          <Row className="mt-2">
+            <p className="text-center">Tones of Plastic Recycled:</p>
+            <CountUp
+              end={300}
+              className="text-center"
+              style={colStyle}
+              duration={4.5}
+            />{" "}
+          </Row>
           {/* Adjust values as needed */}
         </Col>
         <Col className="d-flex justify-content-center align-items-center">
-          <CountUp end={600} style={colStyle} duration={4.5} />{" "}
+          <Row className="mt-2">
+            <p className="text-center">Thousands of creatures saved:</p>
+            <CountUp
+              end={200}
+              className="text-center"
+              style={colStyle}
+              duration={4.5}
+            />
+          </Row>
           {/* Adjust values as needed */}
         </Col>
       </Row>

@@ -24,16 +24,16 @@ function App() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link as={Link} to="/">
+                <Nav.Link as={Link} to="/" activeClassName="active">
                   Home
                 </Nav.Link>
-                <Nav.Link as={Link} to="/user">
+                <Nav.Link as={Link} to="/user" activeClassName="active">
                   User dashboard
                 </Nav.Link>
-                <Nav.Link as={Link} to="/store">
+                <Nav.Link as={Link} to="/store" activeClassName="active">
                   Store
                 </Nav.Link>
-                <Nav.Link as={Link} to="/feedback">
+                <Nav.Link as={Link} to="/feedback" activeClassName="active">
                   Feedback
                 </Nav.Link>
               </Nav>
