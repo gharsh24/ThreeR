@@ -21,7 +21,13 @@ function App() {
           data-bs-theme="dark"
         >
           <Container>
-            <Navbar.Brand href="/">ThreeR</Navbar.Brand>
+            <Navbar.Brand href="/">
+            <img src="../public/assets/brandimg.png"
+              width="80"
+              height="80"
+              className="d-inline-block align-top img-fluid"
+              alt="React Bootstrap logo"
+            /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
