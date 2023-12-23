@@ -37,17 +37,17 @@ function MovingBg() {
   const colStyle = {
     fontSize: "2rem", // Default font size for small screens
 
-    "@media (min-width: 576px)": {
+    "@media (minWidth: 576px)": {
       fontSize: "2.5rem",
     },
 
-    "@media (min-width: 768px)": {
+    "@media (minWidth: 768px)": {
       fontSize: "3rem",
     },
-    "@media (min-width: 992px)": {
+    "@media (minWidth: 992px)": {
       fontSize: "4rem",
     },
-    "@media (min-width: 1200px)": {
+    "@media (minWidth: 1200px)": {
       fontSize: "5rem",
     },
 
@@ -58,17 +58,17 @@ function MovingBg() {
   const colStyle2 = {
     fontSize: "3rem", // Default font size for small screens
 
-    "@media (min-width: 576px)": {
+    "@media (minWidth: 576px)": {
       fontSize: "3.5rem",
     },
 
-    "@media (min-width: 768px)": {
+    "@media (minWidth: 768px)": {
       fontSize: "4rem",
     },
-    "@media (min-width: 992px)": {
+    "@media (minWidth: 992px)": {
       fontSize: "5rem",
     },
-    "@media (min-width: 1200px)": {
+    "@media (minWidth: 1200px)": {
       fontSize: "6rem",
     },
 
