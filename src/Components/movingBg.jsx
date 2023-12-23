@@ -55,7 +55,7 @@ function MovingBg() {
   };
 
   return (
-    <Container fluid className="mt-4 p-0" style={containerStyle}>
+    <Container fluid className="mt-0 p-0" style={containerStyle}>
       <video autoPlay loop muted className="bg-vid" style={videoStyle}>
         <source src={Bgvideo} type="video/mp4" />
       </video>
