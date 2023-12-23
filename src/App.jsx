@@ -56,7 +56,7 @@ function App() {
           ></Route>
           <Route path="/user" element={<UserDashboard />}></Route>
           <Route path="/store" element={<Store />}></Route>
-          <Route path="/Feedback" element={<QnaPage />}></Route>
+          <Route path="/Feedback" element={<FeedbackForm />}></Route>
         </Routes>
       </Router>
       {/* <MovingBg /> */}

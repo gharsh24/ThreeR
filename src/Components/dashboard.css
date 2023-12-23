@@ -1,0 +1,17 @@
+.dashboard{
+    margin: 3% 4.5% 0 4.5%;
+}
+.dashbody{
+    
+    margin: 3% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.card1{
+    padding: 1.8% 6.5%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
