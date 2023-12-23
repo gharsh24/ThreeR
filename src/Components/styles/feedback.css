@@ -154,7 +154,7 @@ form .form-row .textarea {
 
 /* Add these styles to your existing feedback.css file */
 
-.container {
+.containerr {
   width: 80%;
   max-width: 800px; /* Adjust the max-width as needed */
   margin: auto;
@@ -217,7 +217,7 @@ textarea {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .container {
+  .containerr {
     width: 90%;
   }
 }
