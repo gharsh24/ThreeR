@@ -1,4 +1,4 @@
-import "./feedback.css"
+import "./styles/feedback.css"
 function FeedbackForm(){
     return <>
 

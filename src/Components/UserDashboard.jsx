@@ -1,6 +1,9 @@
 
-import "./dashboard.css"
+import "./styles/dashboard.css"
 import Card from 'react-bootstrap/Card';
+import PointsHistoryTable from "./PointsHistory";
+
+
 
 function UserDashboard(){
     return<div className="dashboard">
@@ -32,8 +35,7 @@ function UserDashboard(){
         <h1>Point History</h1> 
         </div>
         <div className="point-history">
-            <div className="points">5</div>
-            <div className="actions"></div>
+            <PointsHistoryTable/>
         </div>
     </div> 
 }

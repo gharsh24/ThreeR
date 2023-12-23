@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CountUp from "react-countup";
 import Bgvideo from "./Video/video.mp4"; //video is from Ingrid North
-import "./styles.css";
+import "./styles/styles.css";
 
 function MovingBg() {
   const containerStyle = {

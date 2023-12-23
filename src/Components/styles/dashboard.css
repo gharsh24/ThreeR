@@ -1,9 +1,9 @@
 .dashboard{
-    margin: 3% 4.5% 0 4.5%;
+    margin: 5% 7%;
 }
 .dashbody{
     
-    margin: 3% 0;
+    margin: 5% 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -14,4 +14,8 @@
     padding: 1.8% 6.5%;
     border: 2px solid black;
     border-radius: 10px;
+}
+
+.point-history{
+    margin: 5%;
 }
