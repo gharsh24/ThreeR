@@ -22,25 +22,27 @@ function App() {
         >
           <Container>
             <Navbar.Brand href="/">
-            <img src="../public/assets/brandimg.png"
-              width="80"
-              height="80"
-              className="d-inline-block align-top img-fluid"
-              alt="React Bootstrap logo"
-            /></Navbar.Brand>
+              <img
+                src="../public/assets/brandimg.png"
+                width="80"
+                height="80"
+                className="d-inline-block align-top img-fluid"
+                alt="React Bootstrap logo"
+              />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link as={Link} to="/">
+                <Nav.Link as={Link} to="/" className="ms-2">
                   Home
                 </Nav.Link>
-                <Nav.Link as={Link} to="/user">
+                <Nav.Link as={Link} to="/user" className="ms-2">
                   User dashboard
                 </Nav.Link>
-                <Nav.Link as={Link} to="/store">
+                <Nav.Link as={Link} to="/store" className="ms-2">
                   Store
                 </Nav.Link>
-                <Nav.Link as={Link} to="/feedback">
+                <Nav.Link as={Link} to="/feedback" className="ms-2">
                   Feedback
                 </Nav.Link>
               </Nav>
