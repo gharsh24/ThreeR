@@ -8,8 +8,8 @@ import "./styles/style.css";
 
 function MovingBg() {
   return (
-    <Container fluid className="mt-0 p-0 containerStyle" >
-      <video autoPlay loop muted className="bg-vid videoStyle" >
+    <Container fluid className="mt-0 p-0 containerStyle">
+      <video autoPlay loop muted className="bg-vid videoStyle">
         <source src={Bgvideo} type="video/mp4" />
       </video>
 
@@ -29,11 +29,10 @@ function MovingBg() {
 
         <Col className="d-flex justify-content-center align-items-center">
           <Row className="mt-2">
-            <h3 className="text-center">Number of Trees Planted:</h3>
+            <h4 className="text-center">Number of Trees Planted:</h4>
             <CountUp
               end={500}
               className="text-center colStyle2"
-              
               duration={1.5}
             />
           </Row>
@@ -43,12 +42,11 @@ function MovingBg() {
       </Row>
       <Row className="rowStyle">
         <Col className="d-flex justify-content-center align-items-center">
-          <Row className="mt-2">
-            <h4 className="text-center">Number of Trees Planted:</h4>
+          <Row className="">
+            <h5 className="text-center">Number of Trees Planted:</h5>
             <CountUp
               end={400}
               className="text-center colStyle"
-
               duration={1.5}
             />{" "}
           </Row>
@@ -56,11 +54,10 @@ function MovingBg() {
         </Col>
         <Col className="d-flex justify-content-center align-items-center">
           <Row className="mt-2">
-            <h4 className="text-center">Tones of Plastic Recycled:</h4>
+            <h5 className="text-center">Tones of Plastic Recycled:</h5>
             <CountUp
               end={300}
               className="text-center colStyle"
-            
               duration={1.5}
             />{" "}
           </Row>
@@ -68,19 +65,16 @@ function MovingBg() {
         </Col>
         <Col className="d-flex justify-content-center align-items-center">
           <Row className="mt-2">
-            <h4 className="text-center">Thousands of creatures saved:</h4>
+            <h5 className="text-center">Thousands of creatures saved:</h5>
             <CountUp
               end={200}
               className="text-center colStyle"
-          
               duration={1.5}
             />
           </Row>
           {/* Adjust values as needed */}
         </Col>
       </Row>
-
-      
     </Container>
   );
 }
