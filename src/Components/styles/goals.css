@@ -1,0 +1,110 @@
+/* Custom CSS for the Purposes Section */
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* Section styles */
+  .section {
+    padding: 60px 0;
+  }
+  
+  /* Heading styles */
+  .heading-block h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  /* Introduction paragraph */
+  .intro {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  /* Purpose items container */
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Purpose item */
+  .item-0,
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4 {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Purpose item image */
+  .views-field-field-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Purpose item title */
+  .views-field-title h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #007bff;
+  }
+  
+  /* Purpose item description */
+  .views-field-body p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Purpose item links */
+  .views-field-body a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .views-field-body a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .view-content {
+      justify-content: center;
+    }
+  
+    .item-0,
+    .item-1,
+    .item-2,
+    .item-3,
+    .item-4 {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .item-0,
+    .item-1,
+    .item-2,
+    .item-3,
+    .item-4 {
+      flex-basis: calc(100% - 20px);
+    }
+  }
+  
