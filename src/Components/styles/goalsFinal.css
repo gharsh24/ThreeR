@@ -1,106 +1,107 @@
-  .goalsSection{
-    overflow-x: hidden;
-    
-  }
-  
-  .app-header {
-    display: block;
-    padding: 30px;
-  }
-  
-  .app-title {
-    display: inline-block;
-    width: 100%;
-    margin: 80px 0 0 0;
-    position: relative;
-    float: left;
-    color: #fff;
-  
-    @media (min-width: 768px) {
-      width: 20%;
-      margin: 280px 0 0 0;
-    }
-  
-    h1 {
-      font-size: 52px;
-      margin: 0;
-    }
-  
-    p {
-      font-weight: 200;
-      opacity: .5;
-    }
-  }
-  
-  .app-title-content {
-    position: relative;
-    color: black;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-  
-    @media (min-width: 768px) {
-      width: auto;
-      position: absolute;
-      text-align: left;
-    }
-  }
-  
-  .app-card-list {
-    display: inline-block;
-   
-    width: 100%;
-    float: right;
-    margin: 0;
-    min-height: 75vh;
-    white-space: normal;
-    overflow-x: scroll;
-    margin-top: -70px;
-    
-  
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  
-    @media (min-width: 768px) {
-      width: 80%;
-      white-space: nowrap;
-      margin-top: 0;
-    }
-  
-    .card {
-      height: 600px; /* Adjust the height of the cards as needed */
-      width: 300px; /* Adjust the width of the cards as needed */
-      margin: 60px 30px;
-      display: inline-block;
-      vertical-align: top;
-      position: relative;
-  
-      .card-header {
-        height: 200px; /* Adjust the height of the card header/image section */
-        background-size: cover;
-        background-position: center;
-      }
-  
-      .card-body {
-        white-space: normal;
-        height: calc(100% - 40px); /* Adjust as needed based on the button size and spacing */
-        overflow: hidden;
-      }
-    }
-  }
-  
-  .designer-link {
-    display: inline-block;
-    padding-top: 40px;
+.goalsSection {
+  overflow-x: hidden;
+  background-color: #d3d3d3;
+  background-image: linear-gradient(315deg, #d3d3d3 0%, #97e1af 74%);
+}
+
+.app-header {
+  display: block;
+  padding: 30px;
+}
+
+.app-title {
+  display: inline-block;
+  width: 100%;
+  margin: 80px 0 0 0;
+  position: relative;
+  float: left;
+  color: #fff;
+
+  @media (min-width: 768px) {
+    width: 20%;
+    margin: 280px 0 0 0;
   }
 
-  .button{
+  h1 {
+    font-size: 52px;
+    margin: 0;
+  }
+
+  p {
+    font-weight: 200;
+    opacity: 0.5;
+  }
+}
+
+.app-title-content {
+  position: relative;
+  color: black;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: 768px) {
+    width: auto;
     position: absolute;
+    text-align: left;
+  }
+}
+
+.app-card-list {
+  display: inline-block;
+
+  width: 100%;
+  float: right;
+  margin: 0;
+  min-height: 75vh;
+  white-space: normal;
+  overflow-x: scroll;
+  margin-top: -70px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    width: 80%;
+    white-space: nowrap;
+    margin-top: 0;
+  }
+
+  .card {
+    height: 600px; /* Adjust the height of the cards as needed */
+    width: 300px; /* Adjust the width of the cards as needed */
+    margin: 60px 30px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+
+    .card-header {
+      height: 200px; /* Adjust the height of the card header/image section */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-body {
+      white-space: normal;
+      height: calc(
+        100% - 40px
+      ); /* Adjust as needed based on the button size and spacing */
+      overflow: hidden;
+    }
+  }
+}
+
+.designer-link {
+  display: inline-block;
+  padding-top: 40px;
+}
+
+.button {
+  position: absolute;
   bottom: 20px;
   /* left: 50%;
   transform: translateX(-50%); */
-  }
-  
+}
