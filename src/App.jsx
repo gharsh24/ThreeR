@@ -9,6 +9,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Carosel from "./Components/Carosel";
+import ThreeR from "./Components/ThreeR";
 
 function App() {
   return (
@@ -56,8 +57,7 @@ function App() {
             element={
               <>
                 <MovingBg />
-                {/* <ThreeR /> */}
-                {/* Bekar lag rha yeh ThreeR koi sudhar sako to dekh lena */}
+                <ThreeR />
               </>
             }
           ></Route>
