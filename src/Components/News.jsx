@@ -21,8 +21,9 @@ function News() {
                 src="https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg"
               />
               <Card.Body className="overlay">
+              <Card.Title className="text-center" style={{ color: "white" }}>Plant more Trees</Card.Title>
                 <Card.Text className="text-center" style={{ color: "white" }}>
-                  <h3>Plant More Trees</h3>
+                  
                   lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                 </Card.Text>
               </Card.Body>
@@ -39,8 +40,9 @@ function News() {
                 src="https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               />
               <Card.Body className="overlay">
+              <Card.Title className="text-center" style={{ color: "white" }}>Plant more Trees</Card.Title>
                 <Card.Text className="text-center" style={{ color: "white" }}>
-                  <h3>World with Trees </h3>
+                  
                   lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                 </Card.Text>
               </Card.Body>
@@ -58,11 +60,9 @@ function News() {
                     src="https://images.pexels.com/photos/2409022/pexels-photo-2409022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   />
                   <Card.Body className="overlay">
-                    <Card.Text
-                      className="text-center"
-                      style={{ color: "white" }}
-                    >
-                      <h4>Plastic Recycling</h4>
+
+                  <Card.Title className="text-center" style={{ color: "white" }}>Plant more Trees</Card.Title>
+                    <Card.Text className="text-center" style={{ color: "white" }}>
                       lorem ipsum lorem ipsum lorem
                     </Card.Text>
                   </Card.Body>
@@ -75,11 +75,9 @@ function News() {
                     src="https://images.pexels.com/photos/2382894/pexels-photo-2382894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   />
                   <Card.Body className="overlay">
-                    <Card.Text
-                      className="text-center"
-                      style={{ color: "white" }}
-                    >
-                      <h4>Domestic Waste</h4> lorem ipsum lorem ipsum lorem
+                  <Card.Title className="text-center" style={{ color: "white" }}>Plant more Trees</Card.Title>
+                    <Card.Text className="text-center" style={{ color: "white" }} >
+                      lorem ipsum lorem ipsum lorem
                     </Card.Text>
                   </Card.Body>
                 </Card>

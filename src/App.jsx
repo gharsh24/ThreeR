@@ -8,11 +8,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import ThreeR from "./Components/homepageThreeR";
-import QnaPage from "./Components/QandA";
-import News from "./Components/News";
-import GoalsFinal from "./Components/goalsFinal";
-// import Goals from "./Components/Goals";
 
 function App() {
   return (
@@ -60,8 +55,6 @@ function App() {
             element={
               <>
                 <MovingBg />
-                <News />
-               <GoalsFinal />
                 {/* <ThreeR /> */}
                 {/* Bekar lag rha yeh ThreeR koi sudhar sako to dekh lena */}
               </>

@@ -5,9 +5,11 @@ import Col from "react-bootstrap/Col";
 import CountUp from "react-countup";
 import Bgvideo from "./Video/video.mp4"; //video is from Ingrid North
 import "./styles/style.css";
+import GoalsFinal from "./goalsFinal";
+import News from "./News";
 
 function MovingBg() {
-  return (
+  return (<>
     <Container fluid className="mt-0 p-0 containerStyle">
       <video autoPlay loop muted className="bg-vid videoStyle">
         <source src={Bgvideo} type="video/mp4" />
@@ -76,6 +78,10 @@ function MovingBg() {
         </Col>
       </Row>
     </Container>
+    <News/>
+    <GoalsFinal/>
+
+    </>
   );
 }
 
