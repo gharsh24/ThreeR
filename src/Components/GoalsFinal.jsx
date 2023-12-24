@@ -49,7 +49,7 @@ const GoalsFinal = () => {
   }, []);
 
   return (
-    <div className="goalsSection">
+    <div className="goalsSection mt-4">
       <header className="app-header"></header>
       <Title />
       <div className="app-card-list" id="app-card-list">
