@@ -19,7 +19,7 @@ function Ways() {
           <Container className="mt-2">
             <Row>
               <Col sm={8}>
-                <Table striped>
+                <Table striped variant="info">
                   <thead>
                     <tr>
                       <th>S.No</th>
@@ -29,31 +29,35 @@ function Ways() {
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Use a reusable bottle/cup for beverages on-the-go</td>
+                      <td className="p-3">
+                        Use a reusable bottle/cup for beverages on-the-go
+                      </td>
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>
+                      <td className="p-3">
                         Use reusable grocery bags, and not just for groceries
                       </td>
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>Purchase wisely and recycle</td>
+                      <td className="p-3">Purchase wisely and recycle</td>
                     </tr>
                     <tr>
                       <td>4</td>
-                      <td>
+                      <td className="p-3">
                         Avoid single-use food and drink containers and utensils
                       </td>
                     </tr>
                     <tr>
                       <td>5</td>
-                      <td>Buy secondhand items and donate used goods</td>
+                      <td className="p-3">
+                        Buy secondhand items and donate used goods
+                      </td>
                     </tr>
                     <tr>
                       <td>6</td>
-                      <td>
+                      <td className="p-3">
                         Buy loose fruit and vegetables and avoid items that are
                         heavily packaged
                       </td>
@@ -85,29 +89,31 @@ function Ways() {
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>
+                      <td className="p-3">
                         Donate items that are still in a good, usable condition
                         to charities or charity shops
                       </td>
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>
+                      <td className="p-3">
                         Repurpose glass, plastic and cardboard containers to
                         give them another life
                       </td>
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>Carry a re-usable shopping bag</td>
+                      <td className="p-3">Carry a re-usable shopping bag</td>
                     </tr>
                     <tr>
                       <td>4</td>
-                      <td>Re-use wrapping paper or gift bags</td>
+                      <td className="p-3">
+                        Re-use wrapping paper or gift bags
+                      </td>
                     </tr>
                     <tr>
                       <td>5</td>
-                      <td>
+                      <td className="p-3">
                         Convert old clothing, towels or sheets into cleaning
                         rags/cloths
                       </td>
@@ -129,7 +135,7 @@ function Ways() {
           <Container className="mt-2">
             <Row>
               <Col sm={8}>
-                <Table striped>
+                <Table striped variant="info ">
                   <thead>
                     <tr>
                       <th>S.No</th>
@@ -139,32 +145,32 @@ function Ways() {
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Recycle plastic bags separately</td>
+                      <td className="p-3">Recycle plastic bags separately</td>
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>
+                      <td className="p-3">
                         Check the symbol printed on plastics to see if they’re
                         recyclable
                       </td>
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>
+                      <td className="p-3">
                         Glass can be recycled over and over again, so don’t
                         trash it!
                       </td>
                     </tr>
                     <tr>
                       <td>4</td>
-                      <td>
+                      <td className="p-3">
                         So long as it’s clean, you can recycle basically any
                         metal
                       </td>
                     </tr>
                     <tr>
                       <td>5</td>
-                      <td>
+                      <td className="p-3">
                         Most batteries are recyclable, but they typically must
                         be separated
                       </td>
