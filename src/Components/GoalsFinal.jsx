@@ -5,14 +5,14 @@ import Button from 'react-bootstrap/Button';
 
 const PostsData = [
   {
-    category: "News",
+    category: "Goals",
     title: "Educating Residents on Proper Waste Management:",
     text: "nforming and educating residents about the importance of proper waste management, including segregation, recycling, and responsible disposal practices.",
     image:
       "https://images.pexels.com/photos/128421/pexels-photo-128421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
-    category: "News",
+    category: "Goals",
     title: "Encouraging Recycling Practices:",
     text: "Incentivizing recycling through awareness campaigns, rewards programs, or recognition for individuals or neighborhoods that actively engage in recycling.Motivating residents to actively participate in recycling efforts by providing accessible and convenient recycling facilities.",
     image:
@@ -20,21 +20,21 @@ const PostsData = [
   },
 
   {
-    category: "News",
+    category: "Goals",
     title: "Reducing Environmental Impact of Waste:",
     text: "Reducing the amount of waste sent to landfills by promoting recycling and proper waste disposal techniques.Advocating for the reduction of single-use items to minimize degradation and depletion.",
     image:
       "https://images.pexels.com/photos/2547565/pexels-photo-2547565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
-    category: "News",
+    category: "Goals",
     title: "Organizing Awareness Campaigns:",
     text: "Conducting regular awareness campaigns, events, and workshops to engage the community, spread information about waste management best practices, and encourage participation in recycling initiatives.",
     image:
       "https://images.pexels.com/photos/3302183/pexels-photo-3302183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
-    category: "News",
+    category: "Goals",
     title: "Measuring and Monitoring Impact:",
     text: "Implementing mechanisms to track and measure the effectiveness of the recycling initiative, such as quantifying the amount of waste diverted from landfills and evaluating environmental impact assessments",
     image:
