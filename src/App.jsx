@@ -10,6 +10,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Carosel from "./Components/Carosel";
 import ThreeR from "./Components/ThreeR";
+import Ways from "./Components/Ways";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
               <>
                 <MovingBg />
                 <ThreeR />
+                <Ways />
               </>
             }
           ></Route>
