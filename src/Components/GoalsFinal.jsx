@@ -1,40 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import "./styles/goalsFinal.css";
 
 const PostsData = [
   {
-    "category": "News",
-    "title": "Educating Residents on Proper Waste Management:",
-    "text": "nforming and educating residents about the importance of proper waste management, including segregation, recycling, and responsible disposal practices.",
-    "image": "https://source.unsplash.com/user/erondu/600x400"
+    category: "News",
+    title: "Educating Residents on Proper Waste Management:",
+    text: "nforming and educating residents about the importance of proper waste management, including segregation, recycling, and responsible disposal practices.",
+    image:
+      "https://images.pexels.com/photos/128421/pexels-photo-128421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
-    "category": "Travel",
-    "title": "Encouraging Recycling Practices:",
-    "text": "Incentivizing recycling through awareness campaigns, rewards programs, or recognition for individuals or neighborhoods that actively engage in recycling.",
-    "image": "https://source.unsplash.com/user/_vickyreyes/600x400"
+    category: "Travel",
+    title: "Encouraging Recycling Practices:",
+    text: "Incentivizing recycling through awareness campaigns, rewards programs, or recognition for individuals or neighborhoods that actively engage in recycling.",
+    image:
+      "https://images.pexels.com/photos/802221/pexels-photo-802221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
-  
+
   {
-    "category": "News",
-    "title": "Reducing Environmental Impact of Waste:",
-    "text": "Encouraging the reuse of materials and advocating for the reduction of single-use items to minimize environmental degradation and resource depletion.",
-    "image": "https://source.unsplash.com/user/erondu/600x400"
-  },
-  {
-    "category": "Travel",
-    "title": "Organizing Awareness Campaigns:",
-    "text": "Using various communication channels, including social media, local newspapers, flyers, and community events, to reach a wide audience and promote the importance of recycling.",
-    "image": "https://source.unsplash.com/user/_vickyreyes/600x400"
+    category: "News",
+    title: "Reducing Environmental Impact of Waste:",
+    text: "Encouraging the reuse of materials and advocating for the reduction of single-use items to minimize environmental degradation and resource depletion.",
+    image:
+      "https://images.pexels.com/photos/2547565/pexels-photo-2547565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
-    "category": "Travel",
-    "title": "Measuring and Monitoring Impact:",
-    "text": "Utilizing feedback mechanisms to continuously improve and adapt the initiative based on community input and changing needs.",
-    "image": "https://source.unsplash.com/user/_vickyreyes/600x400"
+    category: "Travel",
+    title: "Organizing Awareness Campaigns:",
+    text: "Using various communication channels, including social media, local newspapers, flyers, and community events, to reach a wide audience and promote the importance of recycling.",
+    image:
+      "https://images.pexels.com/photos/3302183/pexels-photo-3302183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
-  
+  {
+    category: "Travel",
+    title: "Measuring and Monitoring Impact:",
+    text: "Utilizing feedback mechanisms to continuously improve and adapt the initiative based on community input and changing needs.",
+    image:
+      "https://images.pexels.com/photos/247763/pexels-photo-247763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
 ];
 
 const GoalsFinal = () => {
@@ -45,7 +49,7 @@ const GoalsFinal = () => {
   }, []);
 
   return (
-    <div className='goalsSection'>
+    <div className="goalsSection">
       <header className="app-header"></header>
       <Title />
       <div className="app-card-list" id="app-card-list">
@@ -63,7 +67,6 @@ const Title = () => {
       <div className="app-title-content">
         <h1>Our Goals</h1>
         <p>for the better future</p>
-        
       </div>
     </section>
   );
@@ -79,7 +82,7 @@ const Button = () => {
 
 const CardHeader = ({ image, category }) => {
   const style = {
-    backgroundImage: `url(${image})`
+    backgroundImage: `url(${image})`,
   };
   return (
     <header style={style} className="card-header">
