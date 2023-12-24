@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
 import "./styles/store.css";
+import Button from "react-bootstrap/Button";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 function Card({ imageUrl, title, text }) {
   return (
@@ -10,9 +11,8 @@ function Card({ imageUrl, title, text }) {
       <div className="ccard-body">
         <h2 className="ccard-title">{title}</h2>
         <p className="ccard-text">{text}</p>
-        <a href="#" className="btn">
-          Explore
-        </a>
+
+        <Button variant="primary">Go somewhere</Button>
       </div>
     </div>
   );
