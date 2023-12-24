@@ -37,8 +37,11 @@ body {
   border-radius: 10px;
   left: 50%;
   transform: translateX(-50%);
+  transition: transform 0.5s ease-in-out;
 }
-
+.ccard img:hover {
+  transform: translateX(-50%) scale(1.05); /* Apply scale transform on hover */
+}
 .ccard-body {
   padding: 20px;
 }
@@ -61,8 +64,8 @@ body {
   /* width: 100%;
     display: block;
     height: 50px;
-    line-height: 50px;
-    text-align: center; */
+    line-height: 50px;*/
+  text-align: center;
   background-color: rgba(185, 186, 255, 0.38);
   color: blue;
   text-decoration: none;
