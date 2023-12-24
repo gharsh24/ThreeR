@@ -1,6 +1,11 @@
 .dashboard{
-    margin: 5% 7%;
-    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction:row ;
+}
+
+.dashsidecontent{
+    margin: 5% 5% 0 5%;
+    
 }
 .dashbody{
     

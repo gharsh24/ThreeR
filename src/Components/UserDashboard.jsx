@@ -2,11 +2,16 @@
 import "./styles/dashboard.css"
 import Card from 'react-bootstrap/Card';
 import PointsHistoryTable from "./PointsHistory";
-
+import SideNav from "./SideNav";
 
 
 function UserDashboard(){
     return<div className="dashboard">
+        <div className="navbarr">
+            <SideNav/>
+        </div>
+
+        <div className="dashsidecontent">
         <div className="dash-heading">
         <h1>Dashboard</h1> 
         </div>
@@ -37,12 +42,8 @@ function UserDashboard(){
         <div className="point-history">
             <PointsHistoryTable/>
         </div>
+        </div>
     </div> 
 }
 
 export default UserDashboard;
-
-
-
-
-    

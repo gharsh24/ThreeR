@@ -1,20 +1,11 @@
-/* PointsHistoryTable.css */
-/* body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  } */
+
   body{
     font-family: 'Titillium Web', sans-serif;
   }
   .table {
-    border-collapse: collapse;
+    border-collapse: separate;
     width: 100%;
-    /* max-width: 500px; */
+    
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -22,7 +13,8 @@
   .table th, .table td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
+    border: none;
   }
   
   .circle {
@@ -36,4 +28,3 @@
     line-height: 30px;
     margin-right: 10px;
   }
-  
