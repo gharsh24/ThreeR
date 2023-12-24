@@ -94,7 +94,7 @@ const CardHeader = ({ image, category }) => {
 const CardBody = ({ title, text }) => {
   return (
     <div className="card-body">
-      <p className="date">March 20 2015</p>
+      <p className="date">March 20 2023</p>
       <h2>{title}</h2>
       <p className="body-content">{text}</p>
       <Button />
