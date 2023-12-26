@@ -15,7 +15,7 @@ function Publ() {
               className="pub-card mt-2 ms-2 me-2"
               style={{
                 backgroundImage: `url('https://sdgs.un.org/sites/default/files/2023-09/un_climate_sdg_synergies_report-cover_1.png')`,
-                backgroundSize: "fill", // Adjust this property based on your needs
+                backgroundSize: "cover", // Adjust this property based on your needs
                 backgroundPosition: "center",
 
                 border: "2px solid black", // Optional: Adjust the position if needed
