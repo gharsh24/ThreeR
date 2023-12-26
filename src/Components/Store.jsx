@@ -12,7 +12,7 @@ function Card({ imageUrl, title, text }) {
         <h2 className="ccard-title">{title}</h2>
         <p className="ccard-text">{text}</p>
 
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Buy Now</Button>
       </div>
     </div>
   );
@@ -28,34 +28,34 @@ function Store() {
   return (
     <div className="ccontainer">
       <Card
-        imageUrl="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-        title="Title One"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minus voluptas magnam veritatis error quis dolorum ab placeat quasi doloremque."
+        imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2020/10/Pallet-600x600.jpg"
+        title="Heavy Duty Plastic Pallet"
+        text="Manufactured from reprocessed plastic with some of the salient features of these pallets are their durability, sturdiness, waterproofing ability, and being maintenance-free."
       />
       <Card
-        imageUrl="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-        title="Title Two"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minus voluptas magnam veritatis error quis dolorum ab placeat quasi doloremque."
+        imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2020/10/Dustbin-600x600.jpg"
+        title="Carbon Negative Dustbin- 50 Ltrs"
+        text="Super Shakti Dustbin is made of 100% sustained and recycled plastic. These Dustbins can be used in commercial, industrial and residential areas."
       />
       <Card
-        imageUrl="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80"
-        title="Title Three"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minus voluptas magnam veritatis error quis dolorum ab placeat quasi doloremque."
+        imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2020/10/FlowerPot-600x600.jpg"
+        title="Recycled Flower Pot"
+        text="Manufactured out of plastic waste, maintaining the highest quality standards . These pots are designed to be durable, lightWweight, easily stackable, with large drain holes and are cost-effective."
       />
       <Card
-        imageUrl="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-        title="Title One"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minus voluptas magnam veritatis error quis dolorum ab placeat quasi doloremque."
+        imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2020/10/12-600x600.jpeg"
+        title="Recycled Garbage Bags "
+        text="These garbage bags have high trash-carrying capacity and are made by recycling plastic waste."
       />
       <Card
-        imageUrl="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-        title="Title Two"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minus voluptas magnam veritatis error quis dolorum ab placeat quasi doloremque."
+        imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2020/10/Bench-600x600.jpg"
+        title="Recycled Plastic Benches"
+        text="Recycled Plastic Benches – 100% MLP Recycled, Reduce Carbon Footprint durability, sturdiness. "
       />
       <Card
-        imageUrl="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80"
-        title="Title Three"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minus voluptas magnam veritatis error quis dolorum ab placeat quasi doloremque."
+        imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2023/07/Tiles-01-768x768.jpg"
+        title="Recycled Plastic Tiles"
+        text="Designed out of Post-Consumer plastic waste, these tiles are super sturdy and easy to install."
       />
     </div>
   );
