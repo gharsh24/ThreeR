@@ -12,6 +12,9 @@ import Carosel from "./Components/Carosel";
 import ThreeR from "./Components/ThreeR";
 import Ways from "./Components/Ways";
 import Navbarr from "./Components/Navbar";
+import Info from "./Components/info";
+import Event from "./Components/Events";
+import Publ from "./Components/Publications";
 
 function App() {
   return (
@@ -62,6 +65,9 @@ function App() {
                 <MovingBg />
                 <ThreeR />
                 <Ways />
+                <Info />
+                <Event />
+                <Publ />
               </>
             }
           ></Route>
