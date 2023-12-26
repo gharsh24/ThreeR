@@ -1,11 +1,11 @@
 // PointsHistoryTable.js
-import React from 'react';
-import { Table } from 'react-bootstrap';
-import './styles/pointhistory.css';
+import React from "react";
+import { Table } from "react-bootstrap";
+import "./styles/pointhistory.css";
 
 const PointsHistoryTable = () => {
   return (
-    <Table className="table" striped bordered variant='info'>
+    <Table className="table" striped bordered variant="info">
       <thead>
         <tr>
           <th>Points</th>
@@ -14,25 +14,58 @@ const PointsHistoryTable = () => {
       </thead>
       <tbody>
         <tr>
-          <td><div className="circle">10</div></td>
+          <td>
+            <div className="circle">10</div>
+          </td>
           <td>Completed Task 1</td>
         </tr>
         <tr>
-          <td><div className="circle">20</div></td>
+          <td>
+            <div className="circle">20</div>
+          </td>
           <td>Completed Task 2</td>
         </tr>
         <tr>
-          <td><div className="circle">5</div></td>
+          <td>
+            <div className="circle">5</div>
+          </td>
           <td>Completed Task 3</td>
         </tr>
         <tr>
-          <td><div className="circle">10</div></td>
+          <td>
+            <div className="circle">10</div>
+          </td>
           <td>Completed Task 4</td>
+        </tr>
+        <tr>
+          <td>
+            <div className="circle" style={{ backgroundColor: "red" }}>
+              10
+            </div>
+          </td>
+          <td>Uncompleted Task 1</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div className="circle" style={{ backgroundColor: "red" }}>
+              30
+            </div>
+          </td>
+          <td>Uncompleted Task 2</td>
+        </tr>
+        <tr>
+          <td>
+            <div className="circle" style={{ backgroundColor: "red" }}>
+              15
+            </div>
+          </td>
+          <td>Uncompleted Task 3</td>
         </tr>
         {/* Add more rows as needed */}
       </tbody>
     </Table>
   );
-}
+};
 
 export default PointsHistoryTable;

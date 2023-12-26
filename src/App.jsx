@@ -11,12 +11,13 @@ import Navbar from "react-bootstrap/Navbar";
 import Carosel from "./Components/Carosel";
 import ThreeR from "./Components/ThreeR";
 import Ways from "./Components/Ways";
+import Navbarr from "./Components/Navbar";
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar
+        {/* <Navbar
           expand="lg"
           className="bg-body-tertiary bg-dark sticky-top"
           bg="dark"
@@ -50,13 +51,14 @@ function App() {
               </Nav>
             </Navbar.Collapse>
           </Container>
-        </Navbar>
+        </Navbar> */}
 
         <Routes>
           <Route
             path="/"
             element={
               <>
+                <Navbarr />
                 <MovingBg />
                 <ThreeR />
                 <Ways />
@@ -64,8 +66,23 @@ function App() {
             }
           ></Route>
           <Route path="/user" element={<UserDashboard />}></Route>
-          <Route path="/store" element={<Store />}></Route>
-          <Route path="/Feedback" element={<FeedbackForm />}></Route>
+          <Route
+            path="/store"
+            element={
+              <>
+                <Navbarr /> <Store />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/Feedback"
+            element={
+              <>
+                <Navbarr />
+                <FeedbackForm />
+              </>
+            }
+          ></Route>
         </Routes>
       </Router>
       {/* <MovingBg /> */}

@@ -141,3 +141,10 @@
   color: rgb(255, 0, 0);
   text-align: center;
 }
+
+/* Add this to your CSS file */
+@media only screen and (min-width: 50em) {
+  .offcanvas-opened {
+    margin-left: 25rem;
+  }
+}
