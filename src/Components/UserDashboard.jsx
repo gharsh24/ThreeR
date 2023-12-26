@@ -131,6 +131,10 @@ function X() {
       <div className="offcanvas-opened">
         {/* Your main content goes here */}
         <h1 className="text-center fw-bold">Your EcoHub</h1>
+        <p className="mt-4 mb-4">
+          <PieChart />
+          <LineChart />
+        </p>
         <CardGroup className="mt-4 mb-4">
           <Card
             className="ms-2"
@@ -173,8 +177,6 @@ function X() {
         </CardGroup>
         <p>
           <PointsHistoryTable />
-          <PieChart />
-          <LineChart />
         </p>
         {/* ... */}
       </div>
