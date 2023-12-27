@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-function Navbarr() {
+function Navbarr({isAuth}) {
   return (
     <>
       <Navbar
@@ -28,9 +28,15 @@ function Navbarr() {
               <Nav.Link as={Link} to="/" className="ms-2">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/user" className="ms-2">
+              {isAuth?<Nav.Link as={Link} to="/user" className="ms-2">
                 User dashboard
-              </Nav.Link>
+              </Nav.Link>:<Nav.Link as={Link} to="/signin" className="ms-2">
+                User dashboard
+              </Nav.Link>}
+              {/* <Nav.Link as={Link} to="/user" className="ms-2">
+                User dashboard
+              </Nav.Link> */}
+              
               <Nav.Link as={Link} to="/store" className="ms-2">
                 Store
               </Nav.Link>

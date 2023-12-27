@@ -6,7 +6,7 @@ import { FaUser, FaCog, FaBell, FaHome, FaStore } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { TiShoppingCart } from "react-icons/ti";
 import { FcFeedback } from "react-icons/fc";
-import "./Styles/style.css"; // Import your custom styles
+import "./styles/style.css"; // Import your custom styles
 import PointsHistoryTable from "./PointsHistory";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
@@ -195,9 +195,10 @@ function MainContent() {
   );
 }
 
-function UserDashboard() {
+function UserDashboard({isAuth}) {
   return (
     <>
+        
       <X />
     </>
   );

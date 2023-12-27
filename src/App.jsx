@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import MovingBg from "./Components/movingBg";
 import Store from "./Components/Store";
@@ -12,8 +13,13 @@ import Carosel from "./Components/Carosel";
 import ThreeR from "./Components/ThreeR";
 import Ways from "./Components/Ways";
 import Navbarr from "./Components/Navbar";
+import SignUp from './Components/SignUp';
+import Login from './Components/Login';
+import {auth} from "./firebase-config";
+
 
 function App() {
+  const [isAuth,setAuth]=useState(false);
   return (
     <>
       <Router>
@@ -58,7 +64,7 @@ function App() {
             path="/"
             element={
               <>
-                <Navbarr />
+                <Navbarr isAuth={isAuth}/>
                 <MovingBg />
                 <ThreeR />
                 <Ways />
@@ -66,11 +72,13 @@ function App() {
             }
           ></Route>
           <Route path="/user" element={<UserDashboard />}></Route>
+          <Route path="/signin" element={<Login setAuth={setAuth}/>}></Route>
+          <Route path="/signup" element={<SignUp setAuth={setAuth}/>}></Route>
           <Route
             path="/store"
             element={
               <>
-                <Navbarr /> <Store />
+                <Navbarr isAuth={isAuth}/> <Store />
               </>
             }
           ></Route>
@@ -78,7 +86,7 @@ function App() {
             path="/Feedback"
             element={
               <>
-                <Navbarr />
+                <Navbarr isAuth={isAuth}/>
                 <FeedbackForm />
               </>
             }
