@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MovingBg from "./Components/movingBg";
 import Store from "./Components/Store";
@@ -16,13 +16,13 @@ import Navbarr from "./Components/Navbar";
 import Info from "./Components/info";
 import Event from "./Components/Events";
 import Publ from "./Components/Publications";
-import SignUp from './Components/SignUp';
-import Login from './Components/Login';
-import {auth} from "./firebase-config";
-
+import SignUp from "./Components/SignUp";
+import Login from "./Components/Login";
+import { auth } from "./firebase-config";
+import Footer from "./Components/Footer";
 
 function App() {
-  const [isAuth,setAuth]=useState(false);
+  const [isAuth, setAuth] = useState(false);
   return (
     <>
       <Router>
@@ -67,24 +67,52 @@ function App() {
             path="/"
             element={
               <>
-                <Navbarr isAuth={isAuth}/>
+                <Navbarr isAuth={isAuth} />
                 <MovingBg />
                 <ThreeR />
                 <Ways />
                 <Info />
                 <Event />
                 <Publ />
+                <Footer />
               </>
             }
           ></Route>
-          <Route path="/user" element={<UserDashboard />}></Route>
-          <Route path="/signin" element={<Login setAuth={setAuth}/>}></Route>
-          <Route path="/signup" element={<SignUp setAuth={setAuth}/>}></Route>
+          <Route
+            path="/user"
+            element={
+              <>
+                {" "}
+                <UserDashboard />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/signin"
+            element={
+              <>
+                <Login setAuth={setAuth} />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/signup"
+            element={
+              <>
+                <SignUp setAuth={setAuth} />
+                <Footer />
+              </>
+            }
+          ></Route>
           <Route
             path="/store"
             element={
               <>
-                <Navbarr isAuth={isAuth}/> <Store />
+                <Navbarr isAuth={isAuth} />
+                <Store />
+                <Footer />
               </>
             }
           ></Route>
@@ -92,8 +120,9 @@ function App() {
             path="/Feedback"
             element={
               <>
-                <Navbarr isAuth={isAuth}/>
+                <Navbarr isAuth={isAuth} />
                 <FeedbackForm />
+                <Footer />
               </>
             }
           ></Route>
