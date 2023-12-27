@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {auth} from "../firebase-config";
 import {createUserWithEmailAndPassword} from 'firebase/auth';
+import Navbarr from './Navbar';
 import "./styles/login.css";
 
 
@@ -28,18 +29,19 @@ function SignUp({setAuth}){
             });
       };
     return <>
+        <Navbarr/>
         <div className="background">
             <div className="shape"></div>
             <div className="shape"></div>
         </div>
-    <form style={{color:'black'}}>
+    <form className=' formm' style={{color:'black'}}>
         <h3>Sign Up</h3>
 
-        <label >Email</label>
-        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" id="username"/>
+        <label className='labell'>Email</label>
+        <input className='inputt'  type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" id="username"/>
 
-        <label >Password</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" id="password"/>
+        <label className='labell'>Password</label>
+        <input  className='inputt' type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" id="password"/>
 
         <button className='buttonn' onClick={handleSignUp}>Sign Up</button>
     </form>
