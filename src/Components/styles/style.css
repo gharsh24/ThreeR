@@ -148,3 +148,51 @@
     margin-left: 25rem;
   }
 }
+.info-card {
+  transition: transform 0.3s ease-in-out;
+}
+.info-card:hover {
+  transform: scale(1.01);
+  font-weight: bold;
+
+  /* Change the background color on hover */
+}
+
+.event-card:hover {
+  transform: scale(1.01);
+  color: white;
+  background-color: #00adef;
+
+  /* Change the background color on hover */
+}
+
+/* Add this to your style.css or in-line style */
+.info-card {
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Set the height of the card as needed */
+  transition: transform 0.3s ease-in-out;
+}
+.pub-card {
+  height: 600px;
+}
+.pub-card:hover {
+  transform: scale(1.05);
+}
+
+.pub-card:hover .card-text {
+  background-color: rgb(237, 192, 192);
+  font-size: 2rem;
+
+  display: block;
+}
+
+.pub-card-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
