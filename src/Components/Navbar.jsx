@@ -15,7 +15,7 @@ function Navbarr({ isAuth }) {
         <Container>
           <Navbar.Brand href="/">
             <img
-              src="../public/assets/brandimg.png"
+              src="/assets/brandimg.png"
               width="80"
               height="80"
               className="d-inline-block align-top img-fluid"

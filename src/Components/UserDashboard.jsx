@@ -11,7 +11,8 @@ import PointsHistoryTable from "./PointsHistory";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import PieChart from "./PieChart";
-
+import {db,auth} from '../firebase-config'
+import { collection, query, where, getDocs } from "firebase/firestore";
 import { useEffect } from "react";
 import LineChart from "./LineChart";
 
@@ -25,14 +26,31 @@ const options = [
 
 function OffCanvasExample({ name, ...props }) {
   const [show, setShow] = useState(false); // Set to false by default
-
+  console.log(auth.currentUser.email)
   // const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
+  
 
   useEffect(() => {
     // Use a media query to determine screen size and set initial show state
     const mediaQuery = window.matchMedia("(min-width: 50em)"); // Adjust the min-width value
     setShow(mediaQuery.matches);
+    const fetchData = async () => {
+      const q = query(collection(db, "userpoints"), where("email", "==", auth.currentUser.email));
+      
+      try {
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+          console.log(doc.id, " => ", doc.data());
+        });
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+  
+    fetchData();
+    
+    
   }, []);
 
   const handleClose = () => {
@@ -53,6 +71,7 @@ function OffCanvasExample({ name, ...props }) {
         onHide={handleClose}
         {...props}
         className="bg-dark text-light"
+        style={{ width: "23vw" }}
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title className="bg-dark text-light">
@@ -116,6 +135,7 @@ function OffCanvasExample({ name, ...props }) {
           {/* Add other footer navigation options as needed */}
         </Offcanvas.Body>
       </Offcanvas>
+      
     </>
   );
 }
@@ -124,17 +144,17 @@ function X() {
   const [show, setShow] = useState(true);
 
   return (
-    <>
+    <div className="m-4">
       {options.map((props, idx) => (
         <OffCanvasExample key={idx} {...props} />
       ))}
       <div className="offcanvas-opened">
         {/* Your main content goes here */}
         <h1 className="text-center fw-bold">Your EcoHub</h1>
-        <p className="mt-4 mb-4">
+        <div className="mt-4 mb-4">
           <PieChart />
           <LineChart />
-        </p>
+        </div>
         <CardGroup className="mt-4 mb-4">
           <Card
             className="ms-2"
@@ -175,27 +195,27 @@ function X() {
             <Card.Footer> Beats 82% of people </Card.Footer>
           </Card>
         </CardGroup>
-        <p>
+        
           <PointsHistoryTable />
-        </p>
+        
         {/* ... */}
       </div>
-    </>
-  );
-}
-
-function MainContent() {
-  const [showOffcanvas, setShowOffcanvas] = useState(false);
-
-  return (
-    <div className={`main-content ${showOffcanvas} ? "offcanvas-opened" : ""}`}>
-      {/* Your main content goes here */}
-      <h1>Main Content</h1>
-      <p>Your content here...</p>
-      {/* ... */}
     </div>
   );
 }
+
+// function MainContent() {
+//   const [showOffcanvas, setShowOffcanvas] = useState(false);
+
+//   return (
+//     <div className={`main-content ${showOffcanvas} ? "offcanvas-opened" : ""}`}>
+//       {/* Your main content goes here */}
+//       <h1>Main Content</h1>
+//       <p>Your content here...</p>
+//       {/* ... */}
+//     </div>
+//   );
+// }
 
 function UserDashboard({isAuth}) {
   return (
