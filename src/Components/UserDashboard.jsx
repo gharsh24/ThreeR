@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { FaUserLargeSlash } from "react-icons/fa6";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { FaUser, FaCog, FaBell, FaHome, FaStore } from "react-icons/fa";
+import { FaCog, FaBell, FaHome, FaStore } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { TiShoppingCart } from "react-icons/ti";
 import { FcFeedback } from "react-icons/fc";
@@ -11,10 +12,12 @@ import PointsHistoryTable from "./PointsHistory";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import PieChart from "./PieChart";
-import {db,auth} from '../firebase-config'
+import { db, auth } from "../firebase-config";
+import { signOut } from "firebase/auth";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { useEffect } from "react";
 import LineChart from "./LineChart";
+import Heat from "./Heatmap";
 
 const options = [
   {
@@ -25,19 +28,35 @@ const options = [
 ];
 
 function OffCanvasExample({ name, ...props }) {
-  const [show, setShow] = useState(false); // Set to false by default
-  console.log(auth.currentUser.email)
+  const navigate = useNavigate();
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      // Sign-out successful.
+      console.log("Sign-out successful");
+      navigate("/signin");
+    } catch (error) {
+      // An error happened.
+      console.log("An error happened", error.message);
+    }
+  };
+  const [show, setShow] = useState(false);
+  const [userData, setUserData] = useState(null); // Set to false by default
+  console.log(auth.currentUser.email);
   // const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
-  
 
   useEffect(() => {
     // Use a media query to determine screen size and set initial show state
+    console.log(auth.currentUser.email);
     const mediaQuery = window.matchMedia("(min-width: 50em)"); // Adjust the min-width value
     setShow(mediaQuery.matches);
     const fetchData = async () => {
-      const q = query(collection(db, "userpoints"), where("email", "==", auth.currentUser.email));
-      
+      const q = query(
+        collection(db, "userpoints"),
+        where("email", "==", auth.currentUser.email)
+      );
+
       try {
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
@@ -47,10 +66,8 @@ function OffCanvasExample({ name, ...props }) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
-    
-    
   }, []);
 
   const handleClose = () => {
@@ -82,9 +99,13 @@ function OffCanvasExample({ name, ...props }) {
           {/* Navigation Options */}
 
           <div>
-            <Button variant="outline-light" className="mb-2 mt-2">
-              <FaUser className="me-2" />
-              User Profile
+            <Button
+              variant="outline-light"
+              className="mb-2 mt-2"
+              onClick={handleSignOut}
+            >
+              <FaUserLargeSlash className="me-2" />
+              Sign Out
             </Button>
           </div>
           <div>
@@ -135,7 +156,6 @@ function OffCanvasExample({ name, ...props }) {
           {/* Add other footer navigation options as needed */}
         </Offcanvas.Body>
       </Offcanvas>
-      
     </>
   );
 }
@@ -153,7 +173,8 @@ function X() {
         <h1 className="text-center fw-bold">Your EcoHub</h1>
         <div className="mt-4 mb-4">
           <PieChart />
-          <LineChart />
+          <Heat />
+          {/* Heat Map shows actual days of signIn not some random data */}
         </div>
         <CardGroup className="mt-4 mb-4">
           <Card
@@ -195,9 +216,9 @@ function X() {
             <Card.Footer> Beats 82% of people </Card.Footer>
           </Card>
         </CardGroup>
-        
-          <PointsHistoryTable />
-        
+
+        <PointsHistoryTable />
+
         {/* ... */}
       </div>
     </div>
@@ -217,10 +238,9 @@ function X() {
 //   );
 // }
 
-function UserDashboard({isAuth}) {
+function UserDashboard({ isAuth }) {
   return (
     <>
-        
       <X />
     </>
   );

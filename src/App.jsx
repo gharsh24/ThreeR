@@ -93,7 +93,6 @@ function App() {
             element={
               <>
                 <Login setAuth={setAuth} />
-                
               </>
             }
           ></Route>
