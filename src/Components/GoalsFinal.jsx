@@ -7,7 +7,7 @@ const PostsData = [
   {
     category: "Goals",
     title: "Educating Residents on Proper Waste Management:",
-    text: "nforming and educating residents about the importance of proper waste management, including segregation, recycling, and responsible disposal practices.",
+    text: "Informing and educating residents about the importance of proper waste management, including segregation, recycling, and responsible disposal practices.",
     image:
       "https://images.pexels.com/photos/128421/pexels-photo-128421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
@@ -50,7 +50,7 @@ const GoalsFinal = () => {
   }, []);
 
   return (
-    <div className="goalsSection mt-4">
+    <div className="goalsSection mt-0">
       <header className="app-header"></header>
       <Title />
       <div className="app-card-list" id="app-card-list">

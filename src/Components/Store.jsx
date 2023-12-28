@@ -26,7 +26,14 @@ Card.propTypes = {
 
 function Store() {
   return (
+    <div>
+    <div className ="storeheading">
+    <h1 className ="gradient-text">SHOP NOW!</h1>
+    </div>
     <div className="ccontainer">
+
+      
+
       <Card
         imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2020/10/Pallet-600x600.jpg"
         title="Heavy Duty Plastic Pallet"
@@ -57,6 +64,7 @@ function Store() {
         title="Recycled Plastic Tiles"
         text="Designed out of Post-Consumer plastic waste, these tiles are super sturdy and easy to install."
       />
+    </div>
     </div>
   );
 }

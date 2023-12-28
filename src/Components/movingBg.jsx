@@ -5,8 +5,8 @@ import Col from "react-bootstrap/Col";
 import CountUp from "react-countup";
 import Bgvideo from "./Video/video.mp4"; //video is from Ingrid North
 import "./styles/style.css";
-import GoalsFinal from "./goalsFinal";
-import News from "./News";
+// import GoalsFinal from "./goalsFinal";
+// import News from "./News";
 
 function MovingBg() {
   return (<>
@@ -78,8 +78,8 @@ function MovingBg() {
         </Col>
       </Row>
     </Container>
-    <News/>
-    <GoalsFinal/>
+    {/* <News/> */}
+    {/* <GoalsFinal/> */}
 
     </>
   );

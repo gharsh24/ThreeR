@@ -20,6 +20,10 @@ import SignUp from "./Components/SignUp";
 import Login from "./Components/Login";
 import { auth } from "./firebase-config";
 import Footer from "./Components/Footer";
+import News from "./Components/News";
+import GoalsFinal from "./Components/GoalsFinal";
+import RecycleRR from "./Components/RecycleRR";
+
 
 function App() {
   const [isAuth, setAuth] = useState(false);
@@ -69,8 +73,10 @@ function App() {
               <>
                 <Navbarr isAuth={isAuth} />
                 <MovingBg />
-                <ThreeR />
-                <Ways />
+                {/* <ThreeR />
+                <Ways /> */}
+                <RecycleRR />
+                <GoalsFinal/>
                 <Info />
                 <Event />
                 <Publ />

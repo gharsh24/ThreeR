@@ -2,6 +2,9 @@ ul {
   margin: 0px;
   padding: 0px;
 }
+
+
+
 .footer-section {
   background: #2b3035;
   position: relative;
@@ -52,6 +55,10 @@ ul {
   font-size: 14px;
   color: #7e7e7e;
   line-height: 28px;
+}
+
+.footer-social-icon{
+    margin-bottom: 40px;
 }
 .footer-social-icon span {
   color: #fff;
@@ -113,17 +120,20 @@ ul {
   text-transform: capitalize;
 }
 .subscribe-form {
+  
   position: relative;
   overflow: hidden;
 }
 .subscribe-form input {
+  border-radius: 10px;
   width: 100%;
   padding: 14px 28px;
   background: #2e2e2e;
-  border: 1px solid #2e2e2e;
+  border: 1px solid #7e7d7d;
   color: #fff;
 }
 .subscribe-form button {
+  border-radius: 10px;
   position: absolute;
   right: 0;
   background: #ff5e14;
