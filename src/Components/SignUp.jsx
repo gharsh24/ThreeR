@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import {auth} from "../firebase-config";
 import {createUserWithEmailAndPassword} from 'firebase/auth';
 import Navbarr from './Navbar';
+import Footer from './Footer';
 import "./styles/login.css";
 
 
@@ -28,7 +29,7 @@ function SignUp({setAuth}){
                 // ..
             });
       };
-    return <>
+    return <div className='login-page'>
         <Navbarr/>
         <div className="background">
             <div className="shape"></div>
@@ -45,7 +46,9 @@ function SignUp({setAuth}){
 
         <button className='buttonn' onClick={handleSignUp}>Sign Up</button>
     </form>
-    </>
+    <div className='footer'>
+    <Footer /></div>
+    </div>
 }
 
 export default SignUp;

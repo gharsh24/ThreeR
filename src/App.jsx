@@ -93,7 +93,7 @@ function App() {
             element={
               <>
                 <Login setAuth={setAuth} />
-                <Footer />
+                
               </>
             }
           ></Route>
@@ -102,7 +102,6 @@ function App() {
             element={
               <>
                 <SignUp setAuth={setAuth} />
-                <Footer />
               </>
             }
           ></Route>

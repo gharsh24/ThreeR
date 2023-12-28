@@ -3,6 +3,8 @@ import {Link,useNavigate} from 'react-router-dom';
 import {auth} from "../firebase-config";
 import {signInWithEmailAndPassword} from 'firebase/auth';
 import Navbarr from './Navbar';
+import Footer from './Footer';
+
 import "./styles/login.css";
 
 
@@ -26,7 +28,7 @@ function Login({setAuth}){
                 const errorMessage = error.message;
             });
       };
-    return <>
+    return <div className='login-page'>
         <Navbarr/>
         <div className="background">
             <div className="shape"></div>
@@ -35,16 +37,18 @@ function Login({setAuth}){
     <form style={{color:'black '}} className='formm'>
         <h3>Login</h3>
 
-        <label className='labell' for="username">Email</label>
+        <label className='labell' >Email</label>
         <input className='inputt' type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email or Phone" id="username"/>
 
-        <label className='labell' for="password">Password</label>
+        <label className='labell' >Password</label>
         <input className='inputt' type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" id="password"/>
 
         <button className='buttonn' onClick={handleSignUp}>Login</button><br/>
         <p>New user? <Link to="/signup" style={{color:'black', textDecoration:'none'}}>Sign Up</Link></p>
     </form>
-    </>
+    <div className='footer'>
+    <Footer /></div>
+    </div>
 }
 
 export default Login;

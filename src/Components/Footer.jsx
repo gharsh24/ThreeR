@@ -73,17 +73,17 @@ const Footer = () => {
                 </div>
                 <ul>
                   <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="#">About</a>
+                    <a href="/user">Dashboard</a>
                   </li>
                   <li>
-                    <a href="#">Store</a>
+                    <a href="/store">Store</a>
                   </li>
 
                   <li>
-                    <a href="#">Contact</a>
+                    <a href="/feedback">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -95,7 +95,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-text mb-25">
                   <p>
-                    Don’t miss to subscribe to our new feeds, kindly fill the
+                    Don't miss to subscribe to our new feeds, kindly fill the
                     form below.
                   </p>
                 </div>

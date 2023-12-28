@@ -1,11 +1,16 @@
-
+.login-page{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
 .background{
     width: 430px;
     height: 520px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
-    top: 50%;
+    top: 60%;
+    
 }
 .background .shape{
     height: 200px;
@@ -33,10 +38,10 @@
 .formm{
     height: 520px;
     width: 400px;
-    background-color: rgba(160, 244, 232, 0.13);
+    background-color: rgba(229, 234, 233, 0.13);
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 50%;
+    top: 60%;
     left: 50%;
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -86,4 +91,9 @@
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.footer{
+    position: relative;
+    top:100%;
 }
