@@ -1,7 +1,15 @@
 @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
 
 .recycleSection {
+  
   padding: 5rem;
+}
+
+.recycleSection h1{
+  
+  
+  font-family: 'Kaushan script', cursive;
+  font-size: 90px!important;
 }
 .ol-cards,
 .ol-cards * {
@@ -112,6 +120,7 @@
   background-color: #c6c9ce;
   padding: 2rem;
 }
+
 h1 {
   text-transform: uppercase;
   font-family: sans-serif;

@@ -6,8 +6,8 @@ import Card from "react-bootstrap/Card";
 import "./Styles/style.css"; // Import your custom styles
 function Event() {
   return (
-    <>
-      <h1 className="text-center mt-5 fw-bold"> Global Events</h1>
+    <div style={{margin:'6% 0'}}>
+      <h1 className="text-center fw-bold" style={{fontFamily:"'Kaushan Script', cursive", fontSize:'85px'}}> Global Events</h1><br/>
       <Container>
         <Row className="mt-4">
           <Col sm={3}>
@@ -117,7 +117,7 @@ function Event() {
           </Col>{" "}
         </Row>
       </Container>
-    </>
+    </div>
   );
 }
 

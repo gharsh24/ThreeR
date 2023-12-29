@@ -3,7 +3,7 @@ import "./styles/points.css";
 
 function Points() {
   return (
-    <div className="pointsComponent">
+    <div className="pointsComponent " style={{marginBottom:'5%'}}>
       <div className="card-wrapper one">
         <div className="card-header">
           <i className="fa-solid fa-user-plus"></i>

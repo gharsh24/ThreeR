@@ -53,8 +53,12 @@ const RecycleRR = () => {
   ];
 
   return (
-    <div className='recycleSection'>
-    <h1 className="text-center mt-4 fs-1 lh-1 fw-bold">The Three R's</h1>
+    <div className='recycleSection mb-5'>
+    <h1 className="text-center mt-4 lh-1">3Rs</h1>
+    <br/>
+    <br/>
+    <br/>
+    
       <ol className="ol-cards">
         {cardsData.map((card, index) => (
           <CardItem key={index} {...card} />

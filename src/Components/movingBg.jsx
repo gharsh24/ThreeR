@@ -74,13 +74,9 @@ function MovingBg() {
               duration={1.5}
             />
           </Row>
-          {/* Adjust values as needed */}
         </Col>
       </Row>
     </Container>
-    {/* <News/> */}
-    {/* <GoalsFinal/> */}
-
     </>
   );
 }
