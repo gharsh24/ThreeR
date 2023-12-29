@@ -19,7 +19,6 @@ import { useEffect } from "react";
 import LineChart from "./LineChart";
 import Heat from "./Heatmap";
 
-
 const options = [
   {
     name: "Enable scrolling and disable backdrop",
@@ -146,10 +145,30 @@ function OffCanvasExample({ name, ...props }) {
 
 // ... rest of your components
 
-
 function X() {
   const [show, setShow] = useState(true);
+  const [userData, setUserData] = useState(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const q = query(
+        collection(db, "userpoints"),
+        where("email", "==", auth.currentUser.email)
+      );
+
+      try {
+        const querySnapshot = await getDocs(q);
+        const userDoc = querySnapshot.docs[0];
+        if (userDoc) {
+          setUserData({ id: userDoc.id, ...userDoc.data() });
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <div className="m-4">
       {options.map((props, idx) => (
@@ -172,7 +191,7 @@ function X() {
           >
             <Card.Body>
               <Card.Title className="fw-bold">Your Points</Card.Title>
-              <Card.Text>300</Card.Text>
+              <Card.Text>{userData ? userData.points : 0}</Card.Text>
             </Card.Body>
 
             <Card.Footer>10 More to next Reward</Card.Footer>
@@ -185,7 +204,7 @@ function X() {
           >
             <Card.Body>
               <Card.Title className="fw-bold">Task Completed</Card.Title>
-              <Card.Text>10</Card.Text>
+              <Card.Text>{userData ? userData.completedtasks : 0}</Card.Text>
             </Card.Body>
 
             <Card.Footer>2 Tasks left for this Week</Card.Footer>
