@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 .pointsComponent {
-    
   font-family: "Roboto", sans-serif;
   background: linear-gradient(to right, #00000075, #ffffff);
   height: 100vh;
@@ -14,7 +13,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-} 
+}
 /*card style /////////*/
 .card-wrapper {
   --color-primary: #00768b;
@@ -121,14 +120,14 @@
   --color-secondary: #0000008f;
 }
 .card-wrapper.two {
-    --color-primary: #000000;
-    --color-secondary: #0000008f;
+  --color-primary: #000000;
+  --color-secondary: #0000008f;
 }
 .card-wrapper.three {
-    --color-primary: #000000;
-    --color-secondary: #0000008f;
+  --color-primary: #000000;
+  --color-secondary: #0000008f;
 }
 .card-wrapper.four {
-    --color-primary: #000000;
-    --color-secondary: #0000008f;
+  --color-primary: #000000;
+  --color-secondary: #0000008f;
 }
