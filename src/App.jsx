@@ -10,10 +10,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Carosel from "./Components/Carosel";
-import ThreeR from "./Components/ThreeR";
-import Ways from "./Components/Ways";
 import Navbarr from "./Components/Navbar";
-import Info from "./Components/info";
 import Event from "./Components/Events";
 import Publ from "./Components/Publications";
 import SignUp from "./Components/SignUp";
@@ -23,6 +20,7 @@ import Footer from "./Components/Footer";
 import News from "./Components/News";
 import GoalsFinal from "./Components/GoalsFinal";
 import RecycleRR from "./Components/RecycleRR";
+import Points from "./Components/Points";
 
 
 function App() {
@@ -73,11 +71,10 @@ function App() {
               <>
                 <Navbarr isAuth={isAuth} />
                 <MovingBg />
-                {/* <ThreeR />
-                <Ways /> */}
                 <RecycleRR />
                 <GoalsFinal/>
-                <Info />
+                <Points />
+                <News />
                 <Event />
                 <Publ />
                 <Footer />

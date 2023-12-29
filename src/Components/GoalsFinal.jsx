@@ -75,10 +75,8 @@ const Title = () => {
 
 const Buttoon = () => {
   return (
-    // <button className="button button-primary">
-    //   <i className="fa fa-chevron-right"></i> Find out more
-    // </button>
-    <Button variant="outline-secondary"><i className="fa fa-chevron-right"></i> Find out more</Button>
+    
+    <Button variant="outline-dark"><i className="fa fa-chevron-right"></i> Find out more</Button>
   );
 };
 
@@ -87,7 +85,7 @@ const CardHeader = ({ image, category }) => {
     backgroundImage: `url(${image})`,
   };
   return (
-    <header style={style} className="card-header">
+    <header style={style} className="card-header-goals">
       <h4 className="card-header--title">{category}</h4>
     </header>
   );
@@ -95,7 +93,7 @@ const CardHeader = ({ image, category }) => {
 
 const CardBody = ({ title, text }) => {
   return (
-    <div className="card-body">
+    <div className="card-body-goals">
       <p className="date">March 20 2023</p>
       <h2>{title}</h2>
       <p className="body-content">{text}</p>
@@ -106,7 +104,7 @@ const CardBody = ({ title, text }) => {
 
 const Card = ({ details }) => {
   return (
-    <article className="card">
+    <article className="card-goals">
       <CardHeader category={details.category} image={details.image} />
       <CardBody title={details.title} text={details.text} />
     </article>

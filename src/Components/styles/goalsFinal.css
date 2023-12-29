@@ -70,22 +70,25 @@
     margin-top: 0;
   }
 
-  .card {
-    height: 620px; /* Adjust the height of the cards as needed */
+  .card-goals {
+    height: 580px; /* Adjust the height of the cards as needed */
     width: 320px; /* Adjust the width of the cards as needed */
     margin: 30px 20px;
+    background-color: #fff;
+    border-radius: 15px;
     display: inline-block;
     vertical-align: top;
     position: relative;
-    border-color: #0a0000;
+    border-color: #ffffff;
 
-    .card-header {
+    .card-header-goals {
       height: 200px; /* Adjust the height of the card header/image section */
       background-size: cover;
       background-position: center;
     }
 
-    .card-body {
+    .card-body-goals {
+      padding: 10px;
       white-space: normal;
       /* height: calc(
         100% - 40px
