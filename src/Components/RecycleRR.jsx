@@ -6,21 +6,23 @@ const RecycleRR = () => {
   const cardsData = [
     {
       accentColor: '#000',
-      iconClass: 'fa-brands fa-codepen',
-      title: 'Recycle',
+      // iconClass: 'fa-brands fa-css3',
+      imageUrl:'/assets/reduce.png',
+      title: 'Reduce',
       description: [
-      'Recycle plastic bags separately',
-	'Check the symbol printed on plastics to see if they’re recyclable',
-      'Glass can be recycled over and over again, so don’t trash it!',
-	'So long as it’s clean, you can recycle basically any metal',
-  'Most batteries are recyclable, but they typically must be separated'
-      ],
+        'Use reusable grocery bags, and not just for groceries',
+'	Purchase wisely and recycle',
+'	Avoid single-use food and drink containers and utensils',
+'	Buy secondhand items and donate used goods',
+	'Buy loose fruit and vegetables and avoid items that are heavily packaged'
+        ],
       // description:
-      //   'Recycle plastic bags separately . Check the symbol printed on plastics to see if they’re recyclable . Glass can be recycled over and over again, so don’t trash it! .So long as it’s clean, you can recycle basically any metal. Most batteries are recyclable, but they typically must be separated.',
+      //   '1	Use a reusable bottle/cup for beverages on-the-go. Use reusable grocery bags, and not just for groceries. Purchase wisely and recycle. Avoid single-use food and drink containers and utensils. Buy secondhand items and donate used goods. Buy loose fruit and vegetables and avoid items that are heavily packaged',
     },
     {
       accentColor: '#000',
-      iconClass: 'fa-brands fa-html5',
+      // iconClass: 'fa-brands fa-html5',
+      imageUrl:'/assets/reuse.png',
       title: 'Reuse',
       description: [
         'Donate items that are still in a good, usable condition to charities or charity shops',
@@ -34,18 +36,20 @@ const RecycleRR = () => {
     },
     {
       accentColor: '#000',
-      iconClass: 'fa-brands fa-css3',
-      title: 'Reduce',
+      // iconClass: 'fa-brands fa-codepen',
+      imageUrl:'/assets/recycle.png',
+      title: 'Recycle',
       description: [
-        'Use reusable grocery bags, and not just for groceries',
-'	Purchase wisely and recycle',
-'	Avoid single-use food and drink containers and utensils',
-'	Buy secondhand items and donate used goods',
-	'Buy loose fruit and vegetables and avoid items that are heavily packaged'
-        ],
+      'Recycle plastic bags separately',
+	'Check the symbol printed on plastics to see if they’re recyclable',
+      'Glass can be recycled over and over again, so don’t trash it!',
+	'So long as it’s clean, you can recycle basically any metal',
+  'Most batteries are recyclable, but they typically must be separated'
+      ],
       // description:
-      //   '1	Use a reusable bottle/cup for beverages on-the-go. Use reusable grocery bags, and not just for groceries. Purchase wisely and recycle. Avoid single-use food and drink containers and utensils. Buy secondhand items and donate used goods. Buy loose fruit and vegetables and avoid items that are heavily packaged',
-    },
+      //   'Recycle plastic bags separately . Check the symbol printed on plastics to see if they’re recyclable . Glass can be recycled over and over again, so don’t trash it! .So long as it’s clean, you can recycle basically any metal. Most batteries are recyclable, but they typically must be separated.',
+    }
+    
   ];
 
   return (
@@ -60,7 +64,7 @@ const RecycleRR = () => {
   );
 };
 
-const CardItem = ({ accentColor, iconClass, title, description }) => {
+const CardItem = ({ accentColor, imageUrl, title, description }) => {
   const cardStyle = {
     '--accent-color': accentColor,
   };
@@ -70,8 +74,9 @@ const CardItem = ({ accentColor, iconClass, title, description }) => {
     
     
     <li style={cardStyle}>
-      <div className="icon">
-        <i className={`fa-brands ${iconClass}`}></i>
+      <div className="icon" style={{display:'flex',justifyContent:'center', alignItems:'center'}}>
+        {/* <i className={`fa-brands ${iconClass}`}></i> */}
+        <img src={imageUrl} style={{width:'70px',height:'60px'}}></img>
       </div>
       <div className="title">{title}</div>
       <ul className="descr">
@@ -86,9 +91,10 @@ const CardItem = ({ accentColor, iconClass, title, description }) => {
 
 CardItem.propTypes = {
   accentColor: PropTypes.string.isRequired,
-  iconClass: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired, // Add a new prop for the image URL
+  // iconClass: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default RecycleRR;

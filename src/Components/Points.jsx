@@ -6,7 +6,7 @@ function Points() {
     <div className="pointsComponent">
       <div className="card-wrapper one">
         <div className="card-header">
-          <i class="fa-solid fa-user-plus"></i>
+          <i className="fa-solid fa-user-plus"></i>
           <h2 className="card-header-text1">Sign </h2>
           <h1 className="card-header-text2">Up</h1>
           <p className="card-header-text3">
@@ -48,7 +48,7 @@ function Points() {
       </div>
       <div className="card-wrapper three">
         <div className="card-header">
-          <i class="fa-solid fa-gift"></i>
+          <i className="fa-solid fa-gift"></i>
           <h2 className="card-header-text1">Redeem </h2>
           <h1 className="card-header-text2">Points</h1>
           <p className="card-header-text3">

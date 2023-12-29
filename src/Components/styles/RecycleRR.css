@@ -23,7 +23,7 @@
   gap: 3rem;
   padding-inline-start: var(--flapWidth);
   font-family: sans-serif;
-  color: #222;
+  color: rgb(23, 22, 22);
   counter-reset: ol-cards-count;
   list-style: none;
 }
@@ -36,7 +36,7 @@
   align-items: center;
   padding: var(--colGapSize) var(--flapWidth) var(--colGapSize) 0;
   border-radius: 1rem 5rem 5rem 1rem;
-  background-image: linear-gradient(to bottom right, #e9eaec, #ffffff);
+  background-image: linear-gradient(to bottom right, #84868a, #ffffff);
   counter-increment: ol-cards-count;
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.25));
   box-shadow: inset 2px 2px 2px white, inset -1px -1px 1px rgba(0, 0, 0, 0.25);
@@ -44,7 +44,9 @@
 
 .ol-cards > li > .icon {
   grid-area: icon;
-  background: var(--accent-color);
+  background: rgb(238, 239, 239);
+  /* background: var(--accent-color); */
+  
   color: white;
   font-size: var(--iconSize);
   width: calc(2 * var(--flapWidth) + var(--iconSize));
@@ -56,6 +58,7 @@
   display: grid;
   place-items: center;
 }
+
 .ol-cards > li > .icon::before {
   content: "";
   position: absolute;
@@ -70,15 +73,16 @@
     100% 100%,
     0 calc(100% - var(--flapHeigth))
   );
-  background-color: var(--accent-color);
-  background-image: linear-gradient(
+  /* background-color: var(--accent-color); */
+  background-color: rgb(97, 98, 98);
+  /* background-color: white; */
+  /* background-image: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.5),
+    rgba(165, 230, 245, 0.5),
     rgba(0, 0, 0, 0.2)
-  );
+  ); */
   z-index: -1;
 }
-
 .ol-cards > li > .title {
   grid-area: title;
   font-weight: 600;

@@ -19,6 +19,7 @@ import { useEffect } from "react";
 import LineChart from "./LineChart";
 import Heat from "./Heatmap";
 
+
 const options = [
   {
     name: "Enable scrolling and disable backdrop",
@@ -32,63 +33,46 @@ function OffCanvasExample({ name, ...props }) {
   const handleSignOut = async () => {
     try {
       await signOut(auth);
-      // Sign-out successful.
       console.log("Sign-out successful");
       navigate("/signin");
     } catch (error) {
-      // An error happened.
       console.log("An error happened", error.message);
     }
   };
-  const [show, setShow] = useState(false);
-  const [userData, setUserData] = useState(null); // Set to false by default
-  console.log(auth.currentUser.email);
-  // const handleClose = () => setShow(false);
-  const toggleShow = () => setShow((s) => !s);
+
+  const [show, setShow] = useState(true);
+  // const [isFullWidth, setIsFullWidth] = useState(false);
 
   useEffect(() => {
-    // Use a media query to determine screen size and set initial show state
-    console.log(auth.currentUser.email);
-    const mediaQuery = window.matchMedia("(min-width: 50em)"); // Adjust the min-width value
-    setShow(mediaQuery.matches);
-    const fetchData = async () => {
-      const q = query(
-        collection(db, "userpoints"),
-        where("email", "==", auth.currentUser.email)
-      );
-
-      try {
-        const querySnapshot = await getDocs(q);
-        querySnapshot.forEach((doc) => {
-          console.log(doc.id, " => ", doc.data());
-        });
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
+    const mediaQuery = window.matchMedia("(max-width: 50em)");
+    setShow(!mediaQuery.matches);
   }, []);
 
+  const toggleShow = () => {
+    setShow((s) => !s);
+    // setIsFullWidth(false);
+  };
+
   const handleClose = () => {
-    // Use a media query to determine screen size
-    const mediaQuery = window.matchMedia("(max-width: 50em)"); // Adjust the max-width value
+    const mediaQuery = window.matchMedia("(max-width: 50em)");
     if (mediaQuery.matches) {
-      // Close the Offcanvas only on screens smaller than 64em
       setShow(false);
     }
   };
+
   return (
     <>
       <Button variant="primary" onClick={toggleShow} className="me-2">
         {"Open Side View"}
       </Button>
+      {/* <Button variant="primary" onClick={openFullWidth} className="d-lg-none">
+        {"Open Full Screen"}
+      </Button> */}
       <Offcanvas
         show={show}
         onHide={handleClose}
         {...props}
-        className="bg-dark text-light"
-        style={{ width: "23vw" }}
+        className={`bg-dark text-light ${show ? "full-width" : ""}`}
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title className="bg-dark text-light">
@@ -159,6 +143,9 @@ function OffCanvasExample({ name, ...props }) {
     </>
   );
 }
+
+// ... rest of your components
+
 
 function X() {
   const [show, setShow] = useState(true);
