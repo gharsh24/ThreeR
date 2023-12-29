@@ -12,8 +12,8 @@
 }
 
 .ol-cards {
-  --flapWidth: 5rem;
-  --flapHeigth: 1rem;
+  --flapWidth: 3rem;
+  --flapHeigth: 3rem;
   --iconSize: 3rem;
   --numberSize: 3rem;
   --colGapSize: 2rem;
@@ -82,7 +82,7 @@
 .ol-cards > li > .title {
   grid-area: title;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
 }
 .ol-cards > li > .descr {
   grid-area: descr;
