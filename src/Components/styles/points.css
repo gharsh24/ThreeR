@@ -1,12 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 /* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 } */
 .pointsComponent {
-    
-  font-family: "Roboto", sans-serif;
   background: linear-gradient(to right, #00000075, #ffffff);
   height: 100vh;
   display: flex;
@@ -14,7 +11,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-} 
+}
 /*card style /////////*/
 .card-wrapper {
   --color-primary: #00768b;
@@ -121,35 +118,34 @@
   --color-secondary: #0000008f;
 }
 .card-wrapper.two {
-    --color-primary: #000000;
-    --color-secondary: #0000008f;
+  --color-primary: #000000;
+  --color-secondary: #0000008f;
 }
 .card-wrapper.three {
-    --color-primary: #000000;
-    --color-secondary: #0000008f;
+  --color-primary: #000000;
+  --color-secondary: #0000008f;
 }
 .card-wrapper.four {
-    --color-primary: #000000;
-    --color-secondary: #0000008f;
+  --color-primary: #000000;
+  --color-secondary: #0000008f;
 }
 
 @media only screen and (max-width: 768px) {
   .pointsComponent {
-    
     height: 200vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-  } 
+  }
   .card-wrapper {
-    width: 90%; 
+    width: 90%;
   }
   .card-header {
-    padding: 30px 10px; 
-    height: auto; 
-    border-top-left-radius: 0; 
+    padding: 30px 10px;
+    height: auto;
+    border-top-left-radius: 0;
     z-index: 0;
   }
   .card-header:after {
@@ -159,10 +155,10 @@
     font-size: 30px;
   }
   .card-header h2 {
-    font-size: 24px; 
+    font-size: 24px;
   }
   .card-header p {
-    font-size: 14px; 
+    font-size: 14px;
   }
   .card-footer {
     height: 25vh;
@@ -170,16 +166,57 @@
     border-radius: 5px;
   }
   .card-footer h1 {
-    font-size: 40px; 
+    font-size: 40px;
   }
   .card-footer p {
-    font-size: 10px; 
+    font-size: 10px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .card-wrapper {
-    width: 95%; 
+    width: 95%;
   }
-  
+}
+@media only screen and (max-width: 1250px) {
+  .pointsComponent {
+    height: 200vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .card-wrapper {
+    width: 90%;
+  }
+  .card-header {
+    padding: 10px 10px;
+    height: auto;
+    border-top-left-radius: 0;
+    z-index: 0;
+  }
+  .card-header:after {
+    display: none;
+  }
+  .card-header h1 {
+    font-size: 30px;
+  }
+  .card-header h2 {
+    font-size: 24px;
+  }
+  .card-header p {
+    font-size: 14px;
+  }
+  .card-footer {
+    height: 25vh;
+    margin-top: -50px;
+    border-radius: 5px;
+  }
+  .card-footer h1 {
+    font-size: 40px;
+  }
+  .card-footer p {
+    font-size: 10px;
+  }
 }

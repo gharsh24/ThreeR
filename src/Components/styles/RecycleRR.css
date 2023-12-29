@@ -1,7 +1,7 @@
 @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
 
-.recycleSection{
-    padding: 5rem;
+.recycleSection {
+  padding: 5rem;
 }
 .ol-cards,
 .ol-cards * {
@@ -46,7 +46,7 @@
   grid-area: icon;
   background: rgb(238, 239, 239);
   /* background: var(--accent-color); */
-  
+
   color: white;
   font-size: var(--iconSize);
   width: calc(2 * var(--flapWidth) + var(--iconSize));

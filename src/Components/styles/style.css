@@ -130,7 +130,6 @@
 .image-card:hover .default-text-2 {
   visibility: hidden;
 }
-
 .default-text-2 {
   position: absolute;
   top: 40%;

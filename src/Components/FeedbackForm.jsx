@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import "../Components/styles/feedback.css"
+import React, { useRef, useEffect, useState } from "react";
+import emailjs from "@emailjs/browser";
+import "../Components/styles/feedback.css";
 
 const FeedbackForm = () => {
   const emailRef = useRef(null);
@@ -22,8 +22,8 @@ const FeedbackForm = () => {
       lastNameRef.current &&
       messageRef.current
     ) {
-      const serviceId = 'service_wclvdhb';
-      const templateId = 'contactform01';
+      const serviceId = "service_wclvdhb";
+      const templateId = "contactform01";
       try {
         setLoading(true);
         await emailjs.send(serviceId, templateId, {
@@ -32,9 +32,9 @@ const FeedbackForm = () => {
           message: messageRef.current.value,
           recipient: emailRef.current.value,
         });
-        alert('Thanks for contacting us ');
+        alert("Thanks for contacting us ");
       } catch (error) {
-        console.log('Error:', error);
+        console.log("Error:", error);
       } finally {
         setLoading(false);
       }
@@ -43,9 +43,7 @@ const FeedbackForm = () => {
 
   return (
     <div className="container containerr">
-      <div className="text">
-        Contact us Form
-      </div>
+      <div className="text">Contact us Form</div>
       <form action="#" onSubmit={handleSubmit}>
         {/* Form fields */}
         <div className="form-row">

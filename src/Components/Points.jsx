@@ -7,7 +7,7 @@ function Points() {
       <div className="card-wrapper one">
         <div className="card-header">
           <i className="fa-solid fa-user-plus"></i>
-          <h2 className="card-header-text1">Sign </h2>
+          <h2 className="card-header-text1 fw-bold">Sign </h2>
           <h1 className="card-header-text2">Up</h1>
           <p className="card-header-text3">
             Sign Up to our website and get 100 points as a welcome bonus. Dont
@@ -28,7 +28,7 @@ function Points() {
       <div className="card-wrapper two">
         <div className="card-header">
           <i className="fas fa-cloud-download-alt"></i>
-          <h2 className="card-header-text1">Earn </h2>
+          <h2 className="card-header-text1 fw-bold">Earn </h2>
           <h1 className="card-header-text2">Points</h1>
           <p className="card-header-text3">
             Earn points by participating in activities such as planting or
@@ -49,7 +49,7 @@ function Points() {
       <div className="card-wrapper three">
         <div className="card-header">
           <i className="fa-solid fa-gift"></i>
-          <h2 className="card-header-text1">Redeem </h2>
+          <h2 className="card-header-text1 fw-bold">Redeem </h2>
           <h1 className="card-header-text2">Points</h1>
           <p className="card-header-text3">
             Redeem your points for rewards such as discounts, coupons, and
