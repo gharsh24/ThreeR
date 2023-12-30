@@ -22,7 +22,6 @@ import GoalsFinal from "./Components/GoalsFinal";
 import RecycleRR from "./Components/RecycleRR";
 import Points from "./Components/Points";
 
-
 function App() {
   const [isAuth, setAuth] = useState(false);
   return (
@@ -36,7 +35,7 @@ function App() {
                 <Navbarr isAuth={isAuth} />
                 <MovingBg />
                 <RecycleRR />
-                <GoalsFinal/>
+                <GoalsFinal />
                 <Points />
                 <News />
                 <Event />

@@ -9,6 +9,7 @@ import "./styles/style.css";
 // import News from "./News";
 
 function MovingBg() {
+  console.log(import.meta.env.VITE_REACT_APP_API_KEY);
   return (
     <>
       <Container fluid className="mt-0 p-0 containerStyle">
