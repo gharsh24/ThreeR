@@ -32,12 +32,12 @@ function MovingBg() {
 
           <Col className="d-flex justify-content-center align-items-center">
             <Row className="mt-2">
-              <h4 className="text-center">Number of Trees Planted:</h4>
+              <h4 className="text-center">Carbon Dioxide(ppm):</h4>
               <CountUp
-                end={500}
+                end={420}
                 className="text-center colStyle2"
                 duration={1.5}
-              />
+              />{" "}
             </Row>
             {}
           </Col>
@@ -46,9 +46,11 @@ function MovingBg() {
         <Row className="rowStyle">
           <Col className="d-flex justify-content-center align-items-center">
             <Row className="">
-              <h5 className="text-center">Number of Trees Planted:</h5>
+              <h5 className="text-center">
+                Plastic Used Per day(metric tons):
+              </h5>
               <CountUp
-                end={400}
+                end={367}
                 className="text-center colStyle"
                 duration={1.5}
               />{" "}
@@ -57,9 +59,11 @@ function MovingBg() {
           </Col>
           <Col className="d-flex justify-content-center align-items-center">
             <Row className="mt-2">
-              <h5 className="text-center">Tones of Plastic Recycled:</h5>
+              <h5 className="text-center">
+                Forest Cover Lost( Million Hectares):
+              </h5>
               <CountUp
-                end={300}
+                end={420}
                 className="text-center colStyle"
                 duration={1.5}
               />{" "}
@@ -68,9 +72,11 @@ function MovingBg() {
           </Col>
           <Col className="d-flex justify-content-center align-items-center">
             <Row className="mt-2">
-              <h5 className="text-center">Thousands of creatures saved:</h5>
+              <h5 className="text-center">
+                Species Getting Extinct (Thousands):
+              </h5>
               <CountUp
-                end={200}
+                end={100}
                 className="text-center colStyle"
                 duration={1.5}
               />

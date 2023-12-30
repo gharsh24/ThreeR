@@ -6,8 +6,9 @@ import Card from "react-bootstrap/Card";
 import "./Styles/style.css"; // Import your custom styles
 function Publ() {
   return (
-    <div style={{marginBottom:'7.5%'}}>
-      <h1 className="text-center " style={{fontFamily:"'Kaushan Script', cursive", fontSize:'85px'}}>Publications</h1><br/>
+    <div style={{ marginBottom: "7.5%" }}>
+      <h1 className="text-center public-text ">Publications</h1>
+      <br />
       <Container>
         <Row className="mt-4">
           <Col sm={4}>
