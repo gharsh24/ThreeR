@@ -45,7 +45,7 @@ const Footer = () => {
                 <div className="footer-logo">
                   <a href="#">
                     <img
-                      src="../public/assets/brandimg.png"
+                      src="/assets/brandimg.png"
                       className="img-fluid"
                       alt="logo"
                     ></img>
