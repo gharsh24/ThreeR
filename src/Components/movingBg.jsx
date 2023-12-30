@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CountUp from "react-countup";
-import Bgvideo from "./Video/Video_2.mp4"; //video is from Ingrid North
+import Bgvideo from "./Video/Video_Final.mp4"; //video is from Ingrid North
 import "./styles/style.css";
 // import GoalsFinal from "./goalsFinal";
 // import News from "./News";
