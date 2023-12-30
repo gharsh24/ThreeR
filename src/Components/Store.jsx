@@ -19,7 +19,7 @@ import {
 function Card({ imageUrl, title, text, cost }) {
   const [showAlert, setShowAlert] = useState(false);
   const [userPoints, setUserPoints] = useState(null);
-
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const q = query(
@@ -39,7 +39,7 @@ function Card({ imageUrl, title, text, cost }) {
     };
 
     fetchData();
-  }, []);
+  }, [userPoints]);
 
   const handleBuyNow = async () => {
     if (userPoints >= parseInt(cost)) {
@@ -48,15 +48,22 @@ function Card({ imageUrl, title, text, cost }) {
         const newPoints = userPoints - parseInt(cost);
 
         // Update the user points in the database
-        console.log(auth.currentUser.email);
-        const userDocRef = doc(db, "userpoints", auth.currentUser.email);
-        await updateDoc(userDocRef, { points: newPoints });
+        const q = query(
+          collection(db, "userpoints"),
+          where("email", "==", auth.currentUser.email)
+        );
+        const querySnapshot = await getDocs(q);
+        const userDoc = querySnapshot.docs[0];
+
+        const userDocRef = doc(db, "userpoints", userDoc.id);
+        await updateDoc(userDocRef, { points: newPoints.toString() });
 
         // Show success message or navigate to a success page
         console.log("Buy Now clicked! Points deducted successfully.");
 
         // Update local state
         setUserPoints(newPoints);
+        setShowSuccessAlert(true);
       } catch (error) {
         console.error("Error updating user points:", error);
       }
@@ -82,6 +89,16 @@ function Card({ imageUrl, title, text, cost }) {
             dismissible
           >
             Not enough points!
+          </Alert>
+        )}
+        {showSuccessAlert && (
+          <Alert
+            variant="success"
+            className="mt-3"
+            onClose={() => setShowSuccessAlert(false)}
+            dismissible
+          >
+            Item purchased successfully!
           </Alert>
         )}
         <h3 className="mt-2 fw-bold">{cost}</h3>
@@ -150,7 +167,7 @@ function Store() {
           imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2020/10/FlowerPot-600x600.jpg"
           title="Recycled Flower Pot"
           text="Manufactured out of plastic waste, maintaining the highest quality standards . These pots are designed to be durable, lightWweight, easily stackable, with large drain holes and are cost-effective."
-          cost="5 points"
+          cost="350 points"
         />
         <Card
           imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2020/10/12-600x600.jpeg"
@@ -162,7 +179,7 @@ function Store() {
           imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2020/10/Bench-600x600.jpg"
           title="Recycled Plastic Benches"
           text="Recycled Plastic Benches – 100% MLP Recycled, Reduce Carbon Footprint durability, sturdiness. "
-          cost="250 points"
+          cost="1250 points"
         />
         <Card
           imageUrl="https://www.shaktiplasticinds.com/wp-content/uploads/2023/07/Tiles-01-768x768.jpg"
