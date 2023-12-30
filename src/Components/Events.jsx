@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
-import "./Styles/style.css"; // Import your custom styles
+import "./styles/style.css"; // Import your custom styles
 function Event() {
   return (
     <div style={{margin:'6% 0'}}>
