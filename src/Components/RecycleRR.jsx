@@ -54,7 +54,7 @@ const RecycleRR = () => {
 
   return (
     <div className='recycleSection mb-5'>
-    <h1 className="text-center mt-4 lh-1">3Rs</h1>
+    <h1 className="text-center mt-4 lh-1">3R's</h1>
     <br/>
     <br/>
     <br/>
