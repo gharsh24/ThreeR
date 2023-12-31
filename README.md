@@ -1,4 +1,4 @@
-# Project Name: Sustainable Future Hub
+# Project Name: EcoStride
 
 ## Overview:
 Our project, born from a deep-rooted aspiration to propel society towards a sustainable future, draws inspiration from the United Nations' 17 Sustainable Development Goals. Recognizing the urgent need for environmental conservation, we embarked on a journey of learning and discovery, leveraging technology to drive positive change.
