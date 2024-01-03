@@ -32,12 +32,12 @@ function MovingBg() {
           <Col className="d-flex justify-content-center align-items-center"></Col>
 
           <Col className="d-flex justify-content-center align-items-center">
-            <Row className="mt-2">
+            <Row className="mt-4">
               <h4 className="text-center">Carbon Dioxide(ppm):</h4>
               <CountUp
                 end={420}
                 className="text-center colStyle2"
-                duration={1.5}
+                duration={3.5}
               />{" "}
             </Row>
             {}
@@ -53,7 +53,7 @@ function MovingBg() {
               <CountUp
                 end={367}
                 className="text-center colStyle"
-                duration={1.5}
+                duration={3.5}
               />{" "}
             </Row>
             {/* Adjust values as needed */}
@@ -66,7 +66,7 @@ function MovingBg() {
               <CountUp
                 end={420}
                 className="text-center colStyle"
-                duration={1.5}
+                duration={3.5}
               />{" "}
             </Row>
             {/* Adjust values as needed */}
@@ -79,7 +79,7 @@ function MovingBg() {
               <CountUp
                 end={100}
                 className="text-center colStyle"
-                duration={1.5}
+                duration={3.5}
               />
             </Row>
           </Col>
